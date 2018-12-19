@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>2018年收入管理与分摊报告</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="css/RmsSummary.css">
+    <link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <style>
+        .spinner {
+            width: 143px;
+            height: 143px;
+            background:url("images/lo.png");
+            margin: 100px auto;
+            -webkit-animation: rotateplane 1.2s infinite ease-in-out;
+            animation: rotateplane 1.2s infinite ease-in-out;
+        }
+        .rmsTitle{
+            animation: bounceInLeft 0.5s 0.25s linear forwards;
+        }
+        .rmsTime{
+            animation: bounceInRight 0.7s 0.45s linear forwards;
+        }
+        .rmsLineTitle{animation: bounceInLeft 0.5s 0.25s linear forwards;}
+        .rmsDiv{width:100%;height:100%;display: none;}
+        .rmsNum2{float:left;width:50px;height:50px;line-height:30px;border-radius: 25px 25px 25px 0;background:#CC0000;color:#fff;text-align: center;font-weight: bold;font-size:20px;}
+        .rmsNum1{float:left;width:50px;height:50px;line-height:30px;border-radius: 25px 25px 0 25px;background:#CC0000;color:#fff;text-align: center;font-weight: bold;font-size:20px;}
+        .rmsNum4{float:left;width:50px;height:50px;line-height:30px;border-radius: 0 25px 25px 25px;background:#CC0000;color:#fff;text-align: center;font-weight: bold;font-size:20px;}
+        .rmsNum3{float:left;width:50px;height:50px;line-height:30px;border-radius: 25px 0 25px 25px;background:#CC0000;color:#fff;text-align: center;font-weight: bold;font-size:20px;}
+        #toolTip{background:#999;color:#fff;position: fixed;left:40%;bottom:30px;width:20%;height:30px;line-height:30px;display: none;}
+        .div4Sun{float:left;width:33%;height:80px;text-align: center;            -webkit-animation: rotateplane 1.2s infinite ease-in-out;
+            animation: rotateplane 1.2s infinite ease-in-out;}
+    </style>
+
+</head>
+<body style="text-align: center;font-size:18px;">
+<!--
+<audio autoplay="autoplay" controls="controls" loop="loop" preload="auto" src="mp3/无问.mp3" style="display: none;"></audio>
+-->
+<div id="rmsSpanner"><div style="height:25%;"></div><div class="spinner"></div></div>
+<div style="width: 100%;height:100%" id="rmsBody">
+    <div class="rmsDiv" id="div1">
+        <div style="height:30%;"></div>
+        <div style="width:100%;height:20%;" id="rmsLogo"><img src="images/logo.png" style="width:80%;height:80%;"></div>
+        <div  class="rmsTitle">收入管理与分摊2018总结</div>
+        <div  class="rmsTime">Dec 2018</div>
+    </div>
+    <div class="rmsDiv" id="div2" style="text-align: left;padding:10px;font-size:20px;">
+        <div class="rmsTitle rmsTitleNext">收入管理常态化需求</div>
+        <div style="height:30px;line-height:30px;margin-top:20px;" class="rmsLineTitle">需求响应、交付及时率</div>
+        <div style="border:2px solid #9999FF;border-radius: 40px;margin:20px auto; background: #fff; width:80px;height:80px;line-height:80px;font-weight: bold;font-size:28px;text-align: center;">
+            100<span style="font-size:16px;">%</span>
+        </div>
+        <div style="height:30px;line-height:30px;" class="rmsLineTitle">常态化需求数</div>
+            <div style="border:2px solid #ff6600;border-radius: 40px;margin:20px auto; background: #fff; width:80px;height:80px;line-height:80px;font-weight: bold;font-size:28px;text-align: center;">
+                70<span style="font-size:16px;">项</span>
+            </div>
+            <div style="clear: both;height:20px;"></div>
+            <p class="rmsLine">总部直签名单制客户业务</p>
+            <p class="rmsLine">电子商务内部资源占用省间结算</p>
+            <p class="rmsLine">联通在线结算模式调整</p>
+            <p class="rmsLine">上海权益中心计收结算</p>
+            <p class="rmsLine">后向语音包业务、亲情付业务</p>
+
+    </div>
+    <div class="rmsDiv" id="div3" style="text-align: left;padding:10px;">
+        <div class="rmsTitle rmsTitleNext">收入管理专项业务支撑</div>
+        <div style="float:left;width:50%;height:250px;font-size:16px;padding:10px;">
+            <div class="rmsLineTitle" >增值税税率变更</div>
+            <p>完成全国11%税率和17%税率的调整，相关报表、特殊业务、逻辑调整以及全国业务验证等。 通过系统的调整，实现每月销项税减少0.9亿，极大的降低了税负。</p>
+        </div>
+        <div style="float:left;width:50%;height:250px;font-size:16px;padding:10px;">
+            <div class="rmsLineTitle" >子公司纳入收入管理</div>
+            <p>支撑香港分公司接口上线；支撑美洲、欧洲、日本、新加坡、澳大利亚、缅甸、俄罗斯分公司手工上线；支撑产业互联网广东分公司接口上线；支撑视频公司手工上线；。</p>
+        </div>
+        <div style="clear:both;width:100px;height:100px;text-align: center;margin:0 auto">
+            <div class="rmsNum1">1</div>
+            <div class="rmsNum2">2</div>
+            <div style="clear: both"></div>
+            <div class="rmsNum3">3</div>
+            <div class="rmsNum4">4</div>
+        </div>
+        <div style="float:left;width:50%;height:250px;font-size:16px;padding:10px;">
+            <div class="rmsLineTitle" >递延分摊</div>
+            <p>依托山东业务诉求，启动递延分摊专题工作，完成支持按比例、固定值、均分三种规则的递延分摊功能模块的设计、开发，并在二阶段省分手工导入模板配置上线；</p>
+        </div>
+        <div style="float:left;width:50%;height:250px;font-size:16px;padding:10px;">
+            <div class="rmsLineTitle" >全网结算业务处理模式</div>
+            <p>梳理全网结算业务现状及支撑模式现状，基于统一采集、入库、报表、业业规则和业会规则制定支撑方案，碍于业务、财务、ERP系统等现有支撑模式，方案未启动实施；</p>
+        </div>
+    </div>
+    <div class="rmsDiv" id="div4" style="text-align: left;padding:10px;background: url('images/div41.png') no-repeat;background-size: 100% 100%">
+        <div class="rmsTitle rmsTitleNext">收入管理运维平台建设</div>
+        <div class="div4Sun">
+            <img src="images/div42.png">
+        </div>
+        <div class="div4Sun">
+            <img src="images/div42.png">
+        </div>
+        <div class="div4Sun">
+            <img src="images/div42.png">
+        </div>
+        <div style="float:left;width:33%;height:120px;padding: 5px;">
+            <div class="rmsLineTitle" style="font-size:18px;" >主机运维自动化</div>
+            <p>实现主机监控一点看全、主机问题自愈</p>
+        </div>
+        <div style="float:left;width:33%;height:120px;padding: 5px;">
+            <div class="rmsLineTitle" style="font-size:18px;" >业务运维中心</div>
+            <p>业务处理进度、耗时一点看全</p>
+        </div>
+        <div style="float:left;width:33%;height:120px;padding: 5px;">
+            <div class="rmsLineTitle" style="font-size:18px;" >持续集成</div>
+            <p>平台集成Jenkins功能，实现快捷版本发布</p>
+        </div>
+        <div style="float:left;width:100%;height:50px;"></div>
+        <div class="div4Sun">
+            <img src="images/div42.png">
+        </div>
+        <div class="div4Sun">
+            <img src="images/div42.png">
+        </div>
+        <div class="div4Sun">
+            <img src="images/div42.png">
+        </div>
+        <div style="float:left;width:33%;height:120px;padding: 5px;">
+            <div class="rmsLineTitle" style="font-size:18px;" >脚本管控自动化</div>
+            <p>运维脚本语法词法自动校验、规范审核流程</p>
+        </div>
+        <div style="float:left;width:33%;height:120px;padding: 5px;">
+            <div class="rmsLineTitle" style="font-size:18px;" >高效工具</div>
+            <p>工作日志记录、钉钉消息推送、短信接入等</p>
+        </div>
+        <div style="float:left;width:33%;height:120px;padding: 5px;">
+            <div class="rmsLineTitle" style="font-size:18px;" >智能化</div>
+            <p>持续不断的功能更新，逐步实现智能化运维</p>
+        </div>
+    </div>
+    <div class="rmsDiv" id="div5" style="text-align: left;padding:10px;">
+        <div class="rmsLineTitle" style="font-size:18px;" >工单处理</div>
+        <div></div>
+    </div>
+</div>
+<div class="u-arrow" style="display: none;">
+    <p class="css_sprite01"></p>
+</div>
+<div class="l-arrow" style="display: none;">
+    <p class="css_sprite01"></p>
+</div>
+<div id="toolTip"></div>
+<script>
+    var index = 1;
+    var rmsDivLength = $(".rmsDiv").length;
+    $(document).ready(function () {
+        var spinTimer = setTimeout(function () {
+           $("#rmsSpanner").fadeOut();
+           $(".u-arrow").fadeIn();
+           $("#div"+index).fadeIn();
+        },1000);
+        $(".u-arrow").click(function () {
+            $(".l-arrow").fadeIn();
+            index++;
+            if(index > rmsDivLength){
+                tipSuccess("最后一页");
+                $(".u-arrow").fadeOut();
+            }else{
+                if(index == rmsDivLength){
+                    $(".u-arrow").fadeOut();
+                }
+                hideDiv();
+                $("#div"+index).fadeIn();
+            }
+            showDiv();
+        });
+        $(".l-arrow").click(function () {
+            $(".u-arrow").fadeIn();
+            index--;
+            if(index == 0){
+                $(".l-arrow").fadeOut();
+                tipSuccess("第一页");
+            }else{
+                if(index == 1){
+                    $(".l-arrow").fadeOut();
+                }
+                hideDiv();
+                $("#div"+index).fadeIn();
+            }
+            showDiv();
+        });
+    });
+    function tipSuccess(str){
+        $("#toolTip").fadeIn(500);
+        $("#toolTip").html(str);
+        $("#toolTip").fadeOut(1000);
+    }
+    function hideDiv(){
+        $("#div1").hide();
+        $("#div2").hide();
+        $("#div3").hide();
+        $("#div4").hide();
+        $("#div5").hide();
+
+    }
+    function showDiv(){
+        var div2S = $("#div2").css("display");
+        if(div2S =="block"){
+            for(var i = 0; i < 5; i++){
+                var speed = 1000;
+                speed = speed *(i+1);
+                $(".rmsLine").eq(i).fadeOut(200).fadeIn(speed);
+            }
+        }
+    }
+</script>
+</body>
+</html>
